@@ -210,14 +210,13 @@
   margin-bottom: 2rem;
   line-height: 1.6;
   transform: translateY(10px);
-  /* Removed margin-left: -120px */
 }
 
 .button-container {
   display: flex;
   gap: 1rem;
   transform: translateY(10px);
-  margin-left: 0;  /* Adjusted to normal alignment */
+  margin-left: 0;  
 }
 
 .button,
@@ -398,7 +397,7 @@
 
 .title {
   font-size: 2.5rem;
-  font-family: 'Georgia', serif;
+  font-family: 'Serif', sans-serif;
   font-weight: bold;
   color: #fff;
   margin-bottom: 0;
@@ -458,14 +457,14 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
   font-family: 'Georgia', serif;
 }
 
 .skills-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-left: 0.5rem;
   font-family: 'Georgia', serif;
   font-weight: bold;
@@ -668,7 +667,7 @@
   font-size: 0.875rem;
 }
 
-/* projects.css */
+/* projects */
 
 /* Container for the entire section */
 #projects {
@@ -686,7 +685,7 @@
 .title {
   font-size: 3rem;
   font-weight: bold;
-  font-family: 'Serif', sans-serif;
+  font-family: 'Georgia', serif;
   color: white;
 }
 
@@ -695,6 +694,7 @@
   color: white;
   font-weight: bold;
   margin-left: 1rem;
+  font-family: 'Georgia', serif;
 }
 
 /* Filter buttons */
@@ -885,3 +885,8 @@
   color: #a0a0a0; 
   font-size: 0.875rem; 
  }
+
+  
+
+
+ 
