@@ -1,4 +1,5 @@
-'use client';
+'use client' 
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,9 +24,12 @@ const ContactSection = () => {
         <div className="contact-socials">
           {socials.map((social, index) => (
             <Link key={index} href={social.path} target='_blank'>
-              <Image src={`icons/${social.icon}`}
+              <Image
+                src={`icons/${social.icon}`}
                 alt={social.path.split('/')[2]}
                 className="social-icon"
+                width={40}  // Set the width here
+                height={40} // Set the height here
               />
             </Link>
           ))}
