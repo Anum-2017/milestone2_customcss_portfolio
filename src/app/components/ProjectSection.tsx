@@ -1,7 +1,8 @@
+
 "use client";
 import React, { useState, useRef } from 'react';
 import ProjectCard from './ProjectCard';
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion"; 
 
 const projectsData = [
   {
@@ -83,46 +84,43 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <div className="py-16">
-        <div className="container">
-          <div className="flex flex-col font-serif text-center w-full mb-20">
-            <h1 className="projects-title">
-              My
-              <span>Projects</span>
-            </h1>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {["All", "Typescript", "HTML/CSS/JS", "Next.JS"].map((tag) => (
-              <button
-                key={tag}
-                className={`tag-button ${filter === tag ? 'selected' : ''}`}
-                onClick={() => setFilter(tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-          <ul ref={ref} className="project-grid">
-            {filteredProjects.map((project, index) => (
-              <motion.li
-                key={index}
-                className={`project-item delay-${index}`}
-                variants={cardVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.3, delay: index * 0.2 }}
-              >
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  imgUrl={project.image}
-                  gitUrl={project.gitUrl}
-                  previewUrl={project.previewUrl}
-                />
-              </motion.li>
-            ))}
-          </ul>
+      <div className="projects-container">
+        <div className="title-container">
+          <h1 className="title">
+            My <span className="projects-title">Projects</span>
+          </h1>
         </div>
+        <div className="filter-buttons">
+          {["All", "Typescript", "HTML/CSS/JS", "Next.JS"].map((tag) => (
+            <button
+              key={tag}
+              className={`filter-button ${filter === tag ? 'active' : ''}`}
+              onClick={() => setFilter(tag)}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+        <ul ref={ref} className="projects-grid">
+          {filteredProjects.map((project, index) => (
+            <motion.li 
+              key={index}
+              variants={cardVariants} 
+              initial="initial" 
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.2 }}
+            >
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
     </section>
   );
