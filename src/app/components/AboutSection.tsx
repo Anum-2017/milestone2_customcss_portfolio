@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section id="about">
       <div className="about-container">
-        <Image src="/images/about-image.webp" alt="about" />
+        <Image src="/images/about-image.webp" alt="about" height={300} width={500} />
         <div className="text-container">
           <h1 className="title">About Me</h1>
           <p className="paragraph">
