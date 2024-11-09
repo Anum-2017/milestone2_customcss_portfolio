@@ -404,7 +404,7 @@
 /* Skills Section */
 
 .skills-section {
-  color: #d1d5db; /* Text color: light gray */
+  color: #d1d5db; 
   padding: 4rem 2rem;
   font-family: 'Serif', sans-serif;
 }
@@ -516,7 +516,7 @@
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .skills-list {
