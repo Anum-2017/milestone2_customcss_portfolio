@@ -59,7 +59,7 @@ const ContactSection = () => {
             <textarea
               name="message"
               id="message"
-              placeholder="Let's talk about..."
+              placeholder="Lets talk about..."
             />
           </div>
           <button type="submit">Send Message</button>
