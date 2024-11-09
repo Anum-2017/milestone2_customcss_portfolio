@@ -19,7 +19,7 @@ const SkillsSection = () => {
       <div className="container">
         <div className="title-container">
           <h1 className="section-title">
-            My <span className="skills-title">Skills</span>
+            My Skills
           </h1>
         </div>
 
