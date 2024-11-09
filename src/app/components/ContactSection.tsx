@@ -13,7 +13,7 @@ const ContactSection = () => {
     <section id="contact">
       <div className="gradient-circle"></div>
       <div className="content">
-        <h1>Let&apos;s Connect</h1>
+        <h1>Lets Connect</h1>
         <p>
           I am currently looking for new opportunities, my inbox is always open. 
           Whenever you have a question, or just want to say hi, 
