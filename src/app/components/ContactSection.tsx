@@ -36,6 +36,7 @@ const ContactSection = () => {
         <form className="formContainer">
           <div className="inputGroup">
             <label htmlFor="email" className="inputLabel">Your Email</label>
+               <br/> <br/>
             <input
               name="email"
               type="email"
@@ -47,6 +48,7 @@ const ContactSection = () => {
           </div>
           <div className="inputGroup">
             <label htmlFor="subject" className="inputLabel">Subject</label>
+               <br/> <br/>
             <input
               name="subject"
               type="text"
@@ -58,6 +60,7 @@ const ContactSection = () => {
           </div>
           <div className="inputGroup">
             <label htmlFor="message" className="inputLabel">Message</label>
+               <br/> <br/>
             <textarea
               name="message"
               id="message"
