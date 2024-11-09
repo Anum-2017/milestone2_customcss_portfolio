@@ -756,12 +756,7 @@
 #contact .socialIcon {
   width: 1.5rem;
   height: 1.5rem;
-  filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
-}
-
-#contact .socialIcon:hover {
-  filter: brightness(0.8) invert(1);
 }
 
 #contact .formContainer {
