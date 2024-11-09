@@ -11,20 +11,20 @@ const ContactSection = () => {
 
   return (
     <section id="contact">
-      <div className="gradient-circle"></div>
       <div className="content">
-        <h1>Lets Connect</h1>
-        <p>
+        <h1 className="heading">Lets Connect</h1>
+        <p className="description">
           I am currently looking for new opportunities, my inbox is always open. 
           Whenever you have a question, or just want to say hi, 
           I will try my best to get back to you!
         </p>
         <div className="socials">
           {socials.map((social, index) => (
-            <Link key={index} href={social.path} target='_blank'>
+            <Link key={index} href={social.path} target="_blank">
               <Image
                 src={`/icons/${social.icon}`}
                 alt={`Visit my ${social.path.split('/')[2]} profile`}
+                className="socialIcon"
                 width={24}
                 height={24}
               />
@@ -33,36 +33,41 @@ const ContactSection = () => {
         </div>
       </div>
       <div>
-        <form>
-          <div className="form-group">
-            <label htmlFor="email">Your Email</label>
+        <form className="formContainer">
+          <div className="inputGroup">
+            <label htmlFor="email" className="inputLabel">Your Email</label>
             <input
               name="email"
               type="email"
               id="email"
               required
               placeholder="Your email"
+              className="inputField"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="subject">Subject</label>
+          <div className="inputGroup">
+            <label htmlFor="subject" className="inputLabel">Subject</label>
             <input
               name="subject"
               type="text"
               id="subject"
               required
               placeholder="Just saying hi"
+              className="inputField"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
+          <div className="inputGroup">
+            <label htmlFor="message" className="inputLabel">Message</label>
             <textarea
               name="message"
               id="message"
+              className="textareaField"
               placeholder="Lets talk about..."
             />
           </div>
-          <button type="submit">Send Message</button>
+          <button type="submit" className="button">
+            Send Message
+          </button>
         </form>
       </div>
     </section>
@@ -70,7 +75,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-        
-           
-         
