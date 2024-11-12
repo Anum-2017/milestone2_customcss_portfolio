@@ -2,22 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*{
   background-color: #121212;
-  /* Remove overflow: hidden; */
+  /* overflow: hidden; */
 }
-
-/* Enable scrolling on the body */
-body {
-  overflow: auto; /* This enables scrolling if the content overflows */
-  height: 100%;
-}
-
-/* Optionally, if you want to ensure that content inside containers can scroll: */
-.container, .main-content, .heroSection {
-  overflow: auto;
-}
-
 
 /* Navbar */
 .navbar {
@@ -163,11 +151,6 @@ body {
 .nav-link:hover {
   color: #f63bda; 
 }
-
-:root {
-  background: linear-gradient(90deg, #3b82f6, #ec4899, #10b981);
-}
-
 
 /* Hero Section */
 
@@ -647,12 +630,12 @@ body {
 /* projects */
 
 /* Container for the entire section */
-#projects {
+/* #projects {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-/* Title container */
+
 .title-container {
   text-align: center;
   width: 100%;
@@ -674,56 +657,32 @@ body {
   font-family: 'Georgia', serif;
 }
 
-/* Filter buttons */
 .filter-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .filter-button {
-  border-radius: 9999px;                   /* Pill shape */
-  border: 2px solid #4b5563;               /* Slate 600 border color */
-  padding: 0.5rem 1rem;                    /* Vertical and horizontal padding */
-  font-size: 1rem;                         /* Default font size */
-  color: #4b5563;                          /* Slate 600 text color */
-  background-color: transparent;          /* Transparent background */
+  border-radius: 9999px;
+  border: 2px solid #4b5563; 
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
   cursor: pointer;
-  transition: all 0.3s ease;               /* Smooth transition for all properties */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  transition: border-color 0.3s;
 }
 
 .filter-button:hover {
-  border-color: white;                    /* White border color on hover */
-  color: white;                            /* White text color on hover */
-  background-color: #4b5563;               /* Slate 600 background on hover */
+  border-color: white;
 }
 
 .filter-button.active {
-  border-color: #f63bda;                   /* Purple border when active */
-  color: #f63bda;                          /* Purple text when active */
-  background-color: rgba(246, 59, 218, 0.1); /* Light purple background when active */
+  border-color: #f63bda;; 
 }
 
-/* Mobile-Specific Styles */
-@media (max-width: 600px) {
-  .filter-buttons {
-    flex-direction: column;                /* Stack buttons vertically on mobile */
-    align-items: center;                   /* Center buttons */
-  }
 
-  .filter-button {
-    width: auto;                           /* Keep the button width as auto (do not take full width) */
-    margin-bottom: 0.5rem;                 /* Add space between buttons */
-    font-size: 1rem;                       /* Keep font size the same on mobile */
-  }
-}
-
-/* Grid for the project cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -734,17 +693,128 @@ body {
   list-style-type: none;
 }
 
-/* Additional styling for ProjectCard (can be customized further) */
 .project-card {
   border-radius: 1rem;
   overflow: hidden;
-  background-color: #1f2937; /* Slate 700 */
+  background-color: #1f2937;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+}
+ */
+
+
+/* Basic styling for the section */
+.project-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-header {
+  font-family: "serif";
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.project-subtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 1rem;
+}
+
+.tag-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tag-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  border: 2px solid #6b7280; /* gray-600 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.tag-button.active {
+  border-color: #ec4899; /* pink-500 */
+  color: white;
+}
+
+.tag-button:hover {
+  border-color: white;
+  color: white;
+}
+
+/* Grid styling to ensure only 3 items per row */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 1.5rem;
+}
+
+/* Each project item should only take up 1 column */
+.project-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (min-width: 640px) {
+  .project-title {
+    font-size: 4rem;
+  }
+
+  .project-subtitle {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-title {
+    font-size: 5rem;
+  }
+
+  .project-subtitle {
+    font-size: 5rem;
+  }
 }
 
 /* Contact Section  */
@@ -873,3 +943,4 @@ body {
   color: #a0a0a0; 
   font-size: 0.875rem; 
  }
+ 
