@@ -1,8 +1,7 @@
-
 "use client";
 import React, { useState, useRef } from 'react';
 import ProjectCard from './ProjectCard';
-import { motion, useInView } from "framer-motion"; 
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -83,35 +82,38 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects">
-      <div className="projects-container">
-        <div className="title-container">
-          <h1 className="title">
-            My <span className="projects-title">Projects</span>
+    <section id="projects" className="project-section">
+      <div className="project-container">
+        <div className="project-header">
+          <h1 className="project-title">
+            My
+            <span className="project-subtitle"> Projects</span>
           </h1>
         </div>
-        <div className="filter-buttons">
+
+        <div className="tag-container">
           {["All", "Typescript", "HTML/CSS/JS", "Next.JS"].map((tag) => (
             <button
               key={tag}
-              className={`filter-button ${filter === tag ? 'active' : ''}`}
+              className={`tag-button ${filter === tag ? 'active' : ''}`}
               onClick={() => setFilter(tag)}
             >
               {tag}
             </button>
           ))}
         </div>
-        <ul ref={ref} className="projects-grid">
+
+        <ul ref={ref} className="project-grid">
           {filteredProjects.map((project, index) => (
-            <motion.li 
-              key={index}
-              variants={cardVariants} 
-              initial="initial" 
+            <motion.li
+              key={project.id}
+              className={`project-item ${isInView ? 'animate' : ''}`}
+              variants={cardVariants}
+              initial="initial"
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.3, delay: index * 0.2 }}
             >
               <ProjectCard
-                key={project.id}
                 title={project.title}
                 description={project.description}
                 imgUrl={project.image}
