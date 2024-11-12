@@ -660,32 +660,73 @@
   margin-left: 1rem;
 }
 
+/* Main container for tags */
 .tag-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  padding: 0 1rem; /* Prevent buttons from touching container edges */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
 }
 
+/* Style for each tag button */
 .tag-button {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  border-radius: 9999px;
-  border: 2px solid #6b7280; /* gray-600 */
+  padding: 0.5rem 1rem; /* Default padding */
+  font-size: 0.875rem; /* Default font size */
+  border-radius: 9999px; /* Fully rounded corners */
+  border: 2px solid #6b7280; /* gray-600 border color */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
   color: white;
+  background-color: transparent; /* Transparent background by default */
 }
 
+/* Active state for selected tags */
 .tag-button.active {
-  border-color: #ec4899; /* pink-500 */
-  color: white;
+  border-color: #ec4899; /* pink-500 for active tag */
+  color: white; /* Ensure text stays white */
 }
 
+/* Hover effect for tag buttons */
 .tag-button:hover {
-  border-color: white;
-  color: white;
+  border-color: white; /* White border on hover */
+  color: white; /* White text on hover */
 }
+
+/* Responsive adjustments for medium-sized screens (tablets) */
+@media (max-width: 768px) {
+  .tag-button {
+    padding: 0.4rem 0.8rem; /* Reduce padding on medium screens */
+    font-size: 0.75rem; /* Slightly smaller font size */
+  }
+  
+  .tag-container {
+    justify-content: space-evenly; /* Distribute buttons evenly on smaller screens */
+  }
+}
+
+/* Responsive adjustments for small screens (mobile devices) */
+@media (max-width: 480px) {
+  .tag-button {
+    padding: 0.3rem 0.6rem; /* Further reduce padding on very small screens */
+    font-size: 0.675rem; /* Smaller font size for mobile */
+  }
+
+  .tag-container {
+    padding: 0 0.5rem; /* Reduce horizontal padding for smaller screens */
+    overflow-x: hidden; /* Prevent horizontal overflow on small screens */
+  }
+}
+
+/* Optional: Add a minimum width to the container on very small screens */
+@media (max-width: 280px) {
+  .tag-container {
+    min-width: 280px; /* Prevent the container from becoming too small */
+  }
+}
+
 
 /* Grid styling to ensure only 3 items per row */
 .project-grid {
