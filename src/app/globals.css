@@ -717,9 +717,9 @@ body {
   }
 
   .filter-button {
-    width: 100%;                           /* Make each button take full width on small screens */
+    width: auto;                           /* Keep the button width as auto (do not take full width) */
     margin-bottom: 0.5rem;                 /* Add space between buttons */
-    font-size: 1.1rem;                     /* Slightly increase font size for better readability */
+    font-size: 1rem;                       /* Keep font size the same on mobile */
   }
 }
 
