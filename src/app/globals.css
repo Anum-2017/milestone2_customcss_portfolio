@@ -679,26 +679,48 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;  
-  padding: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .filter-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: transparent;
-  border: 2px solid #ccc;
-  border-radius: 4px;
+  border-radius: 9999px;                   /* Pill shape */
+  border: 2px solid #4b5563;               /* Slate 600 border color */
+  padding: 0.5rem 1rem;                    /* Vertical and horizontal padding */
+  font-size: 1rem;                         /* Default font size */
+  color: #4b5563;                          /* Slate 600 text color */
+  background-color: transparent;          /* Transparent background */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;               /* Smooth transition for all properties */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-button:hover {
-  border-color: white;
+  border-color: white;                    /* White border color on hover */
+  color: white;                            /* White text color on hover */
+  background-color: #4b5563;               /* Slate 600 background on hover */
 }
 
 .filter-button.active {
-  border-color: #f63bda;; 
+  border-color: #f63bda;                   /* Purple border when active */
+  color: #f63bda;                          /* Purple text when active */
+  background-color: rgba(246, 59, 218, 0.1); /* Light purple background when active */
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 600px) {
+  .filter-buttons {
+    flex-direction: column;                /* Stack buttons vertically on mobile */
+    align-items: center;                   /* Center buttons */
+  }
+
+  .filter-button {
+    width: 100%;                           /* Make each button take full width on small screens */
+    margin-bottom: 0.5rem;                 /* Add space between buttons */
+    font-size: 1.1rem;                     /* Slightly increase font size for better readability */
+  }
 }
 
 /* Grid for the project cards */
