@@ -2,10 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   background-color: #121212;
-  overflow: hidden;
+  /* Remove overflow: hidden; */
 }
+
+/* Enable scrolling on the body */
+body {
+  overflow: auto; /* This enables scrolling if the content overflows */
+  height: 100%;
+}
+
+/* Optionally, if you want to ensure that content inside containers can scroll: */
+.container, .main-content, .heroSection {
+  overflow: auto;
+}
+
 
 /* Navbar */
 .navbar {
