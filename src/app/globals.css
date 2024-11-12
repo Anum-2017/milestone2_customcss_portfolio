@@ -629,60 +629,6 @@
 
 /* projects */
 
-/* Container for the entire section */
-/* #projects {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-
-.title-container {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 5rem;
-}
-
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: 'Georgia', serif;
-  color: white;
-}
-
-.projects-title {
-  font-size: 3rem;
-  color: white;
-  font-weight: bold;
-  margin-left: 1rem;
-  font-family: 'Georgia', serif;
-}
-
-.filter-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.filter-button {
-  border-radius: 9999px;
-  border: 2px solid #4b5563; 
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-
-.filter-button:hover {
-  border-color: white;
-}
-
-.filter-button.active {
-  border-color: #f63bda;; 
-}
-
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
