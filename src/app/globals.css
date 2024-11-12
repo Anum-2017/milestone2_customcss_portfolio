@@ -423,6 +423,13 @@
   font-weight: bold;
 }
 
+.skills-subtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 1rem;
+}
+
 /* Skills List Layout (Flexbox with wrap) */
 .skills-list {
   display: flex;
