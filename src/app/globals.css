@@ -679,17 +679,18 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;  
+  padding: 1rem;
 }
 
 .filter-button {
-  border-radius: 9999px;
-  border: 2px solid #4b5563; /* Slate 600 */
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: white;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
-  transition: border-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .filter-button:hover {
